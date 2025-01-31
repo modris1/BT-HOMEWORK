@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-[Roboto] text-base bg-brand-white;
+}
+
+.page-align {
+    @apply m-auto max-w-[1120px];
+}
+
+.btn-primary {
+    @apply rounded-sm flex justify-center items-center w-full h-[48px] bg-brand-blue-ui font-medium text-base text-brand-white;
+}
+
+.btn-primary-alt {
+    @apply rounded-sm border border-brand-blue-ui flex justify-center items-center w-full h-[44px] font-bold text-sm text-brand-blue-ui;
+}
+
+.btn-primary.disabled,
+.btn-primary-alt.disabled {
+    @apply border-none text-text-desc cursor-default;
+}
+
+.btn-primary.disabled {
+    @apply bg-gray-200;
+}
+
+form input,
+form select {
+    @apply appearance-none px-4 border border-form-border w-full h-[48px] font-normal text-sm text-brand-blue bg-brand-white;
+}
+
+form input::placeholder {
+    @apply text-form-placeholder;
+}
+
+form .error input,
+form .error select {
+    @apply border-red-500;
+}
+
+li > a + img {
+    @apply m-[6px] inline-block align-top;
+}
