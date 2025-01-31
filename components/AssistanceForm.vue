@@ -166,7 +166,9 @@ const deleteFlight = (index: number) => {
 }
 
 const validateForm = () => {
-    if (!submitAttempt) return { data: null };
+    if (!submitAttempt.value) return { data: null };
+
+    submitSuccessful.value = false;
 
     const formData = {
         contacts: {},
